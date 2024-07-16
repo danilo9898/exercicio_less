@@ -1,0 +1,97 @@
+@import "mapas.less";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #color[backgroundColor];
+}
+
+header {
+    background-color: #color[buttonColor];
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+}
+.container {
+    color: #color[textColor];
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+    
+    li {
+        list-style: none;
+    }
+    .menu {
+        display: flex;
+
+        li {
+            margin-left: 24px;
+            font-weight: bold;
+            a {
+                color: #color[backgroundColor];
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+
+    h4, h2 {
+        margin: 8px 0;
+        color: #color[buttonColor];;
+    }
+
+    .products {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap: 1%;
+        row-gap: 4%;
+        width: 100%;
+    }
+    
+    .product-item img{
+        width: 100%;
+        border-radius: 16px;
+    }
+    .product-button {
+        display: block;
+        background-color: #color[buttonColor];
+        color: #color[backgroundColor];
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+        font-weight: bold;
+            
+        &:hover {
+                background-color: #color[buttonColor];
+        }
+    }
+}
