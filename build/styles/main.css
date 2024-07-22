@@ -25,16 +25,6 @@ header .container {
   width: 100%;
   margin: 0 auto;
 }
-@media (max-width: 767px) {
-  .container {
-    max-width: 70%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    max-width: 80%;
-  }
-}
 .container li {
   list-style: none;
 }
@@ -82,4 +72,31 @@ section .product-button {
 }
 section .product-button:hover {
   background-color: #EAB543;
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 70%;
+  }
+  .container h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .container .products {
+    display: block;
+  }
+  .container .products .product-button {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 70%;
+  }
+  .container h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .container .products {
+    grid-template-columns: repeat(2, 49%);
+  }
 }
